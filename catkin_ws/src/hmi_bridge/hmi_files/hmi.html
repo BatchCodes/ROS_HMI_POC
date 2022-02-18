@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <script
+      type="text/javascript"
+      src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"
+    ></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <h1>Simple ROS User Interface</h1>
+    <p>Connection status: <span id="status"></span></p>
+    <p>Last message received on /hmi_sub: <span id="msg"></span></p>
+    <form>
+      <label for="pub_input">To publish on /hmi_pub:</label>
+      <input type="text" id="pub_input" name="pub_input" />
+    </form>
+    <button type="button" id="pub_button" onclick="publish_text_field()">
+      Publish
+    </button>
+  </body>
+</html>
